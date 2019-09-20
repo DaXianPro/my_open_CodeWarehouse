@@ -1,0 +1,44 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GentingGame"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="GentingGame.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseLeftButtonDown="MouseButtonDown" Topmost="True">
+    <Window.Background>
+        <SolidColorBrush Color="Black" Opacity="{Binding Value, ElementName=Background_slider}"/>
+    </Window.Background>
+    <Viewbox Stretch="Fill" >
+        <Canvas Opacity="1" Width="750" Height="280">
+            <Slider x:Name="Background_slider"  RenderTransformOrigin="0.5,0.5" Canvas.Left="666" Canvas.Top="20" Width="25" Maximum="1" SmallChange="0.01" Value="0.1" Minimum="0" TickFrequency="0.01" Orientation="Vertical" Height="50"/>
+            <Grid x:Name="ShowGrid" Height="243" Canvas.Left="30" Canvas.Top="20" Width="594">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                    <ColumnDefinition Width="66"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Button x:Name="Exit" Content="X" Canvas.Left="711" Canvas.Top="20" Width="20" Height="16" Click="Exit_Click" BorderThickness="0" FontSize="8"/>
+        </Canvas>
+    </Viewbox>
+
+</Window> 
